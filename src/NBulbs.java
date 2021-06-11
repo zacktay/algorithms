@@ -10,11 +10,11 @@ public class NBulbs {
         // Loop through order of light bulb switched on
         for (int i = 0; i < A.length; i++) {
             // Mark it as 'visited'
-            visited[A[i]] = true;
+            visited[A[i] - 1] = true;
 
             boolean lightUp = true;
             // if it's visited sequentially, lightUp will still be = true at end of loop
-            for (int j = 1; j <= i; j++) {
+            for (int j = 0; j <= i; j++) {
                 // There's bulb that has not been switched on in between
                 if (!visited[j]) {
                     lightUp = false;
