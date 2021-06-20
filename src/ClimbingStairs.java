@@ -8,6 +8,17 @@ public class ClimbingStairs {
         return calculate(n, cached);
     }
 
+    public static int solutionWithoutDP(int n) {
+        return calculate(n);
+    }
+
+    private static int calculate(int n) {
+        if (n < 2) {
+            return 1;
+        }
+        return calculate(n - 1) + calculate(n - 2);
+    }
+
     public static int calculate(int n, int[] cached) {
         // if result is alr cached, return from cache
         if (cached[n] > 0) {
