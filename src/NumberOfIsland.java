@@ -31,7 +31,7 @@ public class NumberOfIsland {
         }
 
         // Mark as visited
-        grid[i][j] = '-';
+        grid[i][j] = '0';
 
         // Up, Down, Left, Right
         visitNearby(grid, i, j + 1);
